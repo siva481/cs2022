@@ -550,3 +550,235 @@ Ok, one module loaded.
 [?1h=>>> q[K:q
 [?1l>Leaving GHCi.
 ]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ git add .
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ git commit -m ""R"e"c"."h"s"
+[main 474aa59] Rec.hs
+ 2 files changed, 130 insertions(+), 1 deletion(-)
+ create mode 100644 src/Rec.hs
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ git push
+Enumerating objects: 8, done.
+Counting objects:  12% (1/8)Counting objects:  25% (2/8)Counting objects:  37% (3/8)Counting objects:  50% (4/8)Counting objects:  62% (5/8)Counting objects:  75% (6/8)Counting objects:  87% (7/8)Counting objects: 100% (8/8)Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects:  20% (1/5)Compressing objects:  40% (2/5)Compressing objects:  60% (3/5)Compressing objects:  80% (4/5)Compressing objects: 100% (5/5)Compressing objects: 100% (5/5), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 4.50 KiB | 1.13 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To github.com:siva481/cs2022
+   d53c871..474aa59  main -> main
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ Script started on 2022-10-03 11:02:55+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="163" LINES="16"]
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ cat '[K`whit[Kch lghci`
+#!/bin/bash
+
+stack exec -- ghci $1]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ lgci[K[K[Kghci app [K/Main.hs
+[0m<<<<<<<<<<<<<<<<<<[0m
+[0mYou are currently using Stack version 2.7.5, but version 2.9.1 is available[0m
+[0mYou can try to upgrade by running 'stack upgrade'[0m
+[0mTired of seeing this? Add 'recommend-stack-upgrade: false' to /home/nao/.stack/config.yaml[0m
+[0m>>>>>>>>>>>>>>>>>>[0m
+[0m[0m
+[0m[0m
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/nao/cs2022/.ghci
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:10:8: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m Variable not in scope: someFunc :: IO ()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m10 |[0m[0m main = [;1m[31msomeFunc[0m[0m
+[;1m[34m   |[0m[0m[;1m[31m        ^^^^^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 11:07:54.6268753
+[?1h=>>> :q
+[?1l>Leaving GHCi.
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ lghci app/Main.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/nao/cs2022/.ghci
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:10:8: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m Variable not in scope: some :: t0 -> IO ()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m10 |[0m[0m main = [;1m[31msome[0m[0m Func
+[;1m[34m   |[0m[0m[;1m[31m        ^^^^[0m[0m
+[0m[0m[0m
+[;1mapp/Main.hs:10:13: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Data constructor not in scope: Func
+    • Perhaps you meant variable ‘func’ (line 20)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m10 |[0m[0m main = some [;1m[31mFunc[0m[0m
+[;1m[34m   |[0m[0m[;1m[31m             ^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 11:08:25.429242672
+[?1h=>>> :q
+[?1l>Leaving GHCi.
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ lghci app/Main.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/nao/cs2022/.ghci
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:10:8: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    Variable not in scope: some :: (String -> String) -> IO ()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m10 |[0m[0m main = [;1m[31msome[0m[0m func
+[;1m[34m   |[0m[0m[;1m[31m        ^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 11:08:58.976170409
+[?1h=>>> :q
+[?1l>Leaving GHCi.
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ lghci app/Main.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/nao/cs2022/.ghci
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:10:8: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Variable not in scope: interract :: (String -> String) -> IO ()
+    • Perhaps you meant ‘interact’ (imported from Prelude)[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m10 |[0m[0m main = [;1m[31minterract[0m[0m func
+[;1m[34m   |[0m[0m[;1m[31m        ^^^^^^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 11:10:20.836896728
+[?1h=>>> :qq[K
+[?1l>Leaving GHCi.
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ lghci app/Main.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/nao/cs2022/.ghci
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 11:10:35.399725541
+[?1h=>>> 27182 `moc[Kd` 818
+[?1l>188
+2022-10-03 11:13:35.439017744
+[?1h=>>> ;r
+[?1l>
+[;1m<interactive>:2:2: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    Parse error: module header, import declaration
+    or top-level declaration expected.[0m[0m
+[0m[0m[0m2022-10-03 11:14:49.948393238
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt =read 
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  --func :: String -> String
+  13  -- func input = unlines ["Hallo Algo-methot!"]
+  14  
+  15  -- func :: String -> String
+  16  -- func input =unlines (map showInt [1..3])
+  17  
+  18  func :: String -> String
+  19  func input = 27182 `mod` 818
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:19:14: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Num String) arising from the literal ‘27182’
+    • In the first argument of ‘mod’, namely ‘27182’
+      In the expression: 27182 `mod` 818
+      In an equation for ‘func’: func input = 27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m19 |[0m[0m func input = [;1m[31m27182[0m[0m `mod` 818
+[;1m[34m   |[0m[0m[;1m[31m              ^^^^^[0m[0m
+[0m[0m[0m
+[;1mapp/Main.hs:19:14: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Integral String) arising from a use of ‘mod’
+    • In the expression: 27182 `mod` 818
+      In an equation for ‘func’: func input = 27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m19 |[0m[0m func input = [;1m[31m27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m[;1m[31m              ^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 11:14:53.625136577
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt =read 
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  --func :: String -> String
+  13  -- func input = unlines ["Hallo Algo-methot!"]
+  14  
+  15  -- func :: String -> String
+  16  -- func input =unlines (map showInt [1..3])
+  17  
+  18  func :: String -> String
+  19  func input = showInt (27182 `mod` 818)
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 11:18:30.433904565
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt =read 
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  --func :: String -> String
+  13  -- func input = unlines ["Hallo Algo-methot!"]
+  14  
+  15  -- func :: String -> String
+  16  -- func input =unlines (map showInt [1..3])
+  17  
+  18  -- func :: String -> String
+  19  -- func input = showInt (27182 `mod` 818)
+  20  
+  21  -- func :: String -> String
+  22  -- func input = showInt (314 * (159 + 265) - 358 )
+  23  
+  24  
+  25  func :: String -> String
+  26  func input = showInt (24 * 60 * 60)
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 11:32:02.561395277
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt =read 
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  func :: String -> String
+  13  
+  14  --func :: String -> String
+  15  -- func input = unlines ["Hallo Algo-methot!"]
+  16  
+  17  -- func :: String -> String
+  18  -- func input =unlines (map showInt [1..3])
+  19  
+  20  -- func :: String -> String
+  21  -- func input = showInt (27182 `mod` 818)
+  22  
+  23  -- func :: String -> String
+  24  -- func input = showInt (314 * (159 + 265) - 358 )
+  25  
+  26  -- func :: String -> String
+  27  -- func input = showInt (24 * 60 * 60)
+  28  
+  29  func input = case readInt input of
+  30      n -> showInt ( 2 * n) 
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 11:45:35.00105786
+[?1h=>>> >>> :q
+[?1l>Leaving GHCi.
+]0;nao@nao: ~/cs2022[01;32mnao@nao[00m:[01;34m~/cs2022[00m$ git add .
