@@ -11,6 +11,9 @@ main = interact func
 
 func :: String -> String
 
+
+
+
 --func :: String -> String
 -- func input = unlines ["Hallo Algo-methot!"]
 
@@ -32,7 +35,12 @@ func :: String -> String
 -- func input = case readInt input of
 --     n -> showInt  (n `mod` 5)
 
-func input = case words input of
-    s:_ -> unlines [concat (replicate 3 s)]
-    [] -> error "invalid input"
+-- func input = case words input of
+--     s:_ -> unlines [concat (replicate 3 s)]
+--     [] -> error "invalid input"
 
+-- func :: String -> String
+-- func input = case map words (lines input) of
+--     [[s]] -> unlines [[s !! 2]]
+func input = case map (map readInt . words) (lines input) of
+    [[x]] -> unlines [showInt ( 24 - x)]
